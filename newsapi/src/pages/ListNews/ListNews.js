@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Form.css';
+import './ListNews.scss';
 
-class Form extends Component {
+class ListNews extends Component {
   // constructor(props){
     // super(props);
     // this.state = {};
@@ -18,9 +18,11 @@ class Form extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        Aqui va la tarjeta de noticias
+      </div>
     );
   }
 }
 
-export default Form;
+export default ListNews;

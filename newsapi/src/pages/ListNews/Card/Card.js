@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Nav.css';
+import './Card.scss';
 
-class Nav extends Component {
+class Card extends Component {
   // constructor(props){
     // super(props);
     // this.state = {};
@@ -23,4 +23,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default Card;

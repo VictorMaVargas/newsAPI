@@ -1,0 +1,15 @@
+.Nav{
+    background: red;
+    
+    margin-left: 72px;
+}
+> ul{
+    list-style: none;
+    li{
+        text-indent: 0;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

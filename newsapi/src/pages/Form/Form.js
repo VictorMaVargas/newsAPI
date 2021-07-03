@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './ListNews.css';
+import './Form.scss';
 
-class ListNews extends Component {
+class Form extends Component {
   // constructor(props){
     // super(props);
     // this.state = {};
@@ -18,9 +18,11 @@ class ListNews extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        Aqui va el formulario
+      </div>
     );
   }
 }
 
-export default ListNews;
+export default Form;

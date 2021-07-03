@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import './Main.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from '../../pages/Home'
+import Form from '../../pages/Form/Form';
+import ListNews from '../../pages/ListNews/';
+
+import './Main.scss';
 
 class Main extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
-
+  
   render() {
     return (
-      <div></div>
+      <main className='Main'>
+        <div className="wrapper">
+          <Switch>
+            <Route path="/home" component={Home} exact />
+            <Route path="/form" component={Form} />
+            <Route path="/list" component={ListNews} />
+          </Switch>
+        </div>
+      </main>
     );
   }
 }
