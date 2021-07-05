@@ -10,12 +10,13 @@ export default function Formulario() {
     
     <form className="formReact" onSubmit={handleSubmit(onSubmit)}>
       <h3>Crea una noticia</h3>
-      Autor <input {...register("author")}/>
-      Título <input {...register("title")} />
-      Descripción <input {...register("description")} />
-      Contenido <input {...register("content")} />
-      Imagen <input {...register("urlToImage")} />
-      
+      <div className="fields">
+        Autor <input {...register("author")}/>
+        Título <input {...register("title")} />
+        Descripción <input {...register("description")} />
+        Contenido <input {...register("content")} />
+        Imagen <input {...register("urlToImage")} />
+      </div>
       <input className="boton" type="submit" />
     </form>
   );

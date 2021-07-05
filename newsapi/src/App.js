@@ -18,14 +18,17 @@ export class App extends Component {
     };
   }
 
-  login = (name) => this.setState({ user: name });
+  
+
+  logoutUser =() => this.setState({user: {}});
+  loginUser = (name) => this.setState({user: {name}});
 
   render() {
     const value = {
       user: this.state.user,
-      loginUser: this.login,
-    };
-
+      logoutUser: this.logoutUser,
+      loginUser: this.loginUser
+    }
     return (
       <div className='App'>
         <BrowserRouter>

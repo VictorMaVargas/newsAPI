@@ -1,7 +1,11 @@
-/*
- * ListNews css File
-*/
+@import '../../Sass/colors';
+@import '../../Sass/mixins';
 
-.ListNews {
-    /* propertys here */
+.list {
+    @include flex-row-space-between;
+    background: $color-primary-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

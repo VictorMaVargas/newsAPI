@@ -1,33 +1,38 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import './ListNews.scss';
-import Card from './Card'
-//const apiKey = process.env.REACT_APP_API_KEY;
+import Card from "./Card/Card";
+import React, { Component } from "react";
+import "./ListNews.scss";
+import axios from "axios";
 
 class ListNews extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      data: "",
+      title: "",
+      author: "",
+      content: "",
+      urlToImage: "",
+      
       articles: [],
     };
   }
 
-  componentDidMount = async () => {
-    const res = await axios.get("https://newsapi.org/v2/everything?domains=wsj.com&pageSize=5&apiKey=5d418527cbf84953abd197fe5f0f246c");
-    const articles = res.data.articles;
-    this.setState({ articles });
-    
-    console.log(res.data.articles);
+  componentDidMount() {
+    axios.get("https://newsapi.org/v2/everything?domains=wsj.com&pageSize=5&apiKey=5d418527cbf84953abd197fe5f0f246c")
+      .then((res) => {
+        const{articles} = res.data;
+        this.setState({articles:[...this.state.articles, ...articles]});
+      });
+  }
+
+  paintCards = () => {
+      return this.state.articles.map((article, index) => <Card article={article} key={index} />)
   };
 
-  paintCards = () => this.state.articles.map((articles, index) => <Card articles={articles} key={index}/>)
-
-
-  render = () => {
-    return<div>
-      <p><Card/></p>
+  render() {
+    return <div className="list">
+      {this.state.articles.length > 0 ? this.paintCards():<></>}
       </div>;
   }
 }
-
 export default ListNews;

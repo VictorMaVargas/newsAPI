@@ -1,14 +1,23 @@
+
+@import '../../Sass/colors';
 .formReact {
-    display: flex;
+    background: $color-primary-light;
+    width: 25%;
+    border-radius: 15px;
+    
+  }
+.fields{
+  display: flex;
     align-content: center;
     flex-direction: column;
     justify-content: center;
-    width: 25%;
-    
-  }
+    align-items: center;
+    width: 100%;
+}
   
   .boton {
     margin-top: 10px;
-      width: 80px;
+    width: 80px;
+      
   }
   

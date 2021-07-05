@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import './Card.scss';
+import React from 'react';
+import './Card.scss'
 
-class Card extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
-
-  render() {
+const Card= ({article }) => {
     return (
-      <div>Aqui va la tarjeta de la noticia creada</div>
-    );
-  }
+      
+        <article className='card'>
+          
+            <p><b>Título:</b> {article.title}</p>
+            <p><b>Autor:</b> {article.author}</p>
+            <p><b>Contenido:</b> {article.content}</p> 
+            <img className="foto" src={article.urlToImage} alt=""/>
+          </article>
+    )
 }
 
-export default Card;
+   
+
+export default Card

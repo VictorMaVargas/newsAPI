@@ -6,8 +6,8 @@ class Home extends Component {
 
   render() {
     return (
-    <section>
-      <form>
+    <section className="formulario">
+      <form className="formHome">
         <label>Introduce Nombre:</label>
         <br />
         <input type="text" name="name" />
