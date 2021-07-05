@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
-import './Home.scss';
+import React, { Component } from "react";
+import "./Home.scss";
 
 class Home extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
+  
 
   render() {
     return (
-      <div>
-        Esta es la Home
-      </div>
-    );
+    <section>
+      <form>
+        <label>Introduce Nombre:</label>
+        <br />
+        <input type="text" name="name" />
+        <button type="submit">Login</button>
+      </form>
+      
+    </section>
+
+    )
   }
 }
 

@@ -1,7 +1,21 @@
-/*
- * Head css File
-*/
+@import "../../Sass/colors";
+@import "../../Sass/mixins";
 
-.Head {
-    /* propertys here */
+.Header {
+  background: $color-primary;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  color: white;
+  box-shadow: 4px 4px 24px $color-primary-dark,
+    -4px -4px 24px $color-primary-light;
+  > div.wrapper{
+    @include flex-row-space-between();
+    flex-flow: nowrap;
+    >  h1 {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+  }
 }

@@ -1,7 +1,14 @@
-/*
- * Form css File
-*/
-
-.Form {
-    /* propertys here */
-}
+.formReact {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    
+  }
+  
+  .boton {
+    margin-top: 10px;
+      width: 80px;
+  }
+  

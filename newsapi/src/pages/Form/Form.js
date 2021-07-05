@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useForm } from "react-hook-form";
 import './Form.scss';
 
-class Form extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
-
-  render() {
-    return (
-      <div>
-        Aqui va el formulario
-      </div>
-    );
-  }
+export default function Formulario() {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = data => console.log(data);
+   
+  return (
+    
+    <form className="formReact" onSubmit={handleSubmit(onSubmit)}>
+      <h3>Crea una noticia</h3>
+      Autor <input {...register("author")}/>
+      Título <input {...register("title")} />
+      Descripción <input {...register("description")} />
+      Contenido <input {...register("content")} />
+      Imagen <input {...register("urlToImage")} />
+      
+      <input className="boton" type="submit" />
+    </form>
+  );
 }
-
-export default Form;

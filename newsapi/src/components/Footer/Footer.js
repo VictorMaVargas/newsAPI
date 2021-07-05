@@ -1,26 +1,15 @@
 import React, { Component } from 'react';
+//import Nav from '../Head/Nav/Nav';
 import './Footer.scss';
 
 class Footer extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
-
+  
   render() {
     return (
-      <div>
-        Este es el footer
-      </div>
+      <footer className="footer">
+        <p>Esto es el Footer</p>
+        {/* <Nav/> */}
+      </footer>
     );
   }
 }
