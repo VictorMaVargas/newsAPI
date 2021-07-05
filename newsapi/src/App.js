@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import { userContext } from "./context/userContext";
+import { BrowserRouter } from "react-router-dom";
+import Head from "./components/Head";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+
+import "./App.scss";
+
+
+export class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: { name: "" },
+    };
+  }
+
+  
+
+  logoutUser =() => this.setState({user: {}});
+  loginUser = (name) => this.setState({user: {name}});
+
+  render() {
+    const value = {
+      user: this.state.user,
+      logoutUser: this.logoutUser,
+      loginUser: this.loginUser
+    }
+    return (
+      <div className='App'>
+        <BrowserRouter>
+          <userContext.Provider value={value}>
+            <Head />
+            <Main />
+            <Footer />
+          </userContext.Provider>
+        </BrowserRouter>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
